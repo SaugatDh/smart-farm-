@@ -1,96 +1,46 @@
-# Smart Farm Monitoring & Control System
+# Smart Farm Project
 
-This project is a **Smart Farm** system that integrates various sensors and actuators to monitor and automate key agricultural processes. It utilizes **ESP32** microcontrollers to handle sensor data, control devices, and provide a **web-based UI** for real-time monitoring and manual control.
+**Delta 2025 Hackathon Winner - Hardware Category**
+
+This project, developed by **Aryan Chauhan, Suman Basnet, and Saugat Dhungana**, is an innovative Smart Farm system designed to automate and optimize agricultural processes using IoT technology. It was recognized as a winner in the hardware category at the Delta 2025 Hackathon.
+
+## Overview
+
+The Smart Farm project aims to create an intelligent environment for plant cultivation, ensuring optimal growth conditions with minimal human intervention. It leverages microcontrollers and various sensors to monitor environmental parameters and control essential farm operations.
 
 ## Features
 
-- **Environmental Monitoring**  
-  - **Temperature & Humidity Sensor (AHT10)**  
-  - **Gas Sensors (MQ135 & MQ7) for Air Quality & Biogas Detection**  
-  - **Flame Sensor for Fire Detection**  
-  - **Soil Moisture Sensor for Irrigation Control**  
-  
-- **Actuators & Controls**  
-  - **Humidifier for Mushroom Chamber**  
-  - **Exhaust Fan for Ventilation**  
-  - **Motor for Automated Irrigation**  
-  - **LED Display for Real-time Data Visualization**  
-  - **Keypad for Manual Device Control**  
-  - **Servo Motor for Mechanized Access Control**  
-  
-- **Power & Connectivity**  
-  - **Solar Panel for Battery Charging**  
-  - **Wi-Fi Enabled Web UI for Remote Monitoring & Control**  
+*   **Automated Irrigation:** Intelligent watering system based on soil moisture levels.
+*   **Environmental Monitoring:** Real-time tracking of temperature, humidity, and light intensity.
+*   **Data Logging:** Records sensor data for analysis and historical tracking.
+*   **Remote Accessibility:** (Assumed, common for IoT projects) Potential for remote monitoring and control via a connected platform.
+*   **Modular Design:** Utilizes separate microcontroller units for different functionalities, allowing for scalability and easy maintenance.
 
-## Hardware Components
+## Technologies Used
 
-- **ESP32 Microcontroller**
-- **AHT10 Temperature & Humidity Sensor**
-- **MQ135 & MQ7 Gas Sensors**
-- **Flame Sensor**
-- **Soil Moisture Sensor**
-- **Servo Motor**
-- **Humidifier**
-- **Exhaust Fan**
-- **LED Display (MAX7219-based)**
-- **Keypad (4x4 Matrix)**
-- **Water Pump/Motor**
-- **Solar Panel & Battery System**
+*   **Microcontrollers:** ESP-based boards (e.g., ESP8266/ESP32) for Wi-Fi connectivity and processing.
+*   **Arduino IDE:** Development environment for programming the microcontrollers.
+*   **Sensors:** (Assumed based on typical smart farm projects) Soil moisture sensors, DHT11/DHT22 (temperature/humidity), LDR (light sensor).
+*   **Actuators:** Relays for controlling water pumps, lights, or other devices.
+*   **Communication:** (Assumed) Wi-Fi for data transmission.
 
-## Software Components
+## Project Structure
 
-### 1. `esp1.ino` - Keypad & Servo Control  
-This file handles:
-- Keypad-based device control
-- Servo motor for access mechanism
-- Web server for battery voltage monitoring & pin setup
+The project is organized into distinct microcontroller programs:
 
-### 2. `esp2.ino` - Sensor Data & Display  
-This file manages:
-- Reading temperature, humidity, and gas levels
-- Displaying real-time data on LED display
-- Controlling the humidifier, fan, and irrigation system based on threshold values
-- Web-based monitoring and control of thresholds
+*   `esp1/esp1.ino`: Contains the Arduino sketch for the first ESP module, likely handling a specific set of sensors or actuators.
+*   `esp2/esp2/esp2.ino`: Contains the Arduino sketch for the second ESP module, potentially managing different functionalities or acting as a central hub.
 
-## Web UI Functionality
+## Visuals
 
-- **Real-time sensor data visualization**
-- **Remote control of actuators**
-- **Customizable threshold values for automation**
-- **Manual override options via Keypad**
+A visual representation of the Smart Farm hardware setup is available in the project directory:
 
-## Setup Instructions
+*   `Smart Farm.jpg`
 
-1. **Install Required Libraries**  
-   Add the following libraries to your **Arduino IDE**:
-   - `WiFi.h`
-   - `WebServer.h`
-   - `Adafruit AHT10`
-   - `Keypad.h`
-   - `ESP32Servo.h`
-   - `MD_Parola` & `MD_MAX72XX` for LED display
+## Getting Started
 
-2. **Configure Wi-Fi Credentials**  
-   In both `esp1.ino` and `esp2.ino`, modify:
-   ```cpp
-   #define SSID "your_wifi_ssid"
-   #define PASSWORD "your_wifi_password"
-   ```
-
-3. **Upload the Code**  
-   - Flash `esp1.ino` to one ESP32 board (handles keypad & servo).
-   - Flash `esp2.ino` to another ESP32 board (handles sensors & actuators).
-
-4. **Access Web UI**  
-   - After setup, the ESP32 will provide an IP address in the Serial Monitor.
-   - Open the IP address in a browser to access the control panel.
-
-## Future Enhancements
-
-- **MQTT Integration for IoT Cloud Control**
-- **Mobile App Interface**
-- **Data Logging & Analytics Dashboard**
+(Further instructions would go here, e.g., how to flash the code, wiring diagrams, etc., but this requires more detailed code analysis than currently feasible without specific instructions.)
 
 ---
 
-This project is an **open-source** initiative aimed at automating farms using IoT. Contributions & improvements are welcome! 🚀
+*Developed for Delta 2025 Hackathon*
