@@ -39,7 +39,7 @@ A visual representation of the Smart Farm hardware setup is available in the pro
 
 ## Getting Started
 
-(Further instructions would go here, e.g., how to flash the code, wiring diagrams, etc., but this requires more detailed code analysis than currently feasible without specific instructions.)
+(T_T)
 
 ---
 
